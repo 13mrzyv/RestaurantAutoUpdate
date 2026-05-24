@@ -12,4 +12,5 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Build
-      run: dotnet build --configuration Release
+      # Bura layihənin yerləşdiyi qovluğun adını əlavə etdik
+      run: dotnet build RestaurantAutoUpdate/RestaurantAutoUpdate.sln --configuration Release
