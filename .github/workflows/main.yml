@@ -7,10 +7,14 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
+    
+    - name: List Files
+      run: dir /s
+      
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
+        
     - name: Build
-      # Bura layihənin yerləşdiyi qovluğun adını əlavə etdik
-      run: dotnet build RestaurantAutoUpdate/RestaurantAutoUpdate.sln --configuration Release
+      run: dotnet build --configuration Release
